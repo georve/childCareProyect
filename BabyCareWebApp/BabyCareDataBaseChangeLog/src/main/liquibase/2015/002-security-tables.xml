@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns='http://www.liquibase.org/xml/ns/dbchangelog'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xsi:schemaLocation='http://www.liquibase.org/xml/ns/dbchangelog 
+  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd'>
+  <changeSet id="001" author="georman.calderon">
+     <createTable
+            remarks="A String"
+            schemaName="UCPB"
+            tableName="UCPB_USER">
+        <!--all entity must have those elements  -->    
+        <column name="ID" type="BIGINT">
+            <constraints primaryKey="true" nullable="false"/>
+        </column>
+        <column name="CREATED_BY" type="VARCHAR(100)">
+            <constraints nullable="false"/>
+        </column>
+        <column name="CREATED_DT" type="TIMESTAMP(6)"/>
+        <column name="CUSTOMCODE" type="VARCHAR(200)"/>
+        <!-- properties of users -->
+        <column name="NAME" type="VARCHAR2(20)">
+            <constraints nullable="false"/>
+        </column>
+        <column name="PASSWORD" type="VARCHAR(20)">
+             <constraints nullable="false"/>
+        </column>
+        <column name="EMAIL" type="VARCHAR(200)">
+            <constraints unique="true" uniqueConstraintName="user_email_uk"/>
+        </column>
+        <column name="ENABLE" type="boolean" defaultValueBoolean="true"/>
+    </createTable>
+  </changeSet>
+  <changeSet id="002" author="georman.calderon">
+     <createTable
+            remarks="A String"
+            schemaName="UCPB"
+            tableName="UCPB_ROLE">
+        <!--all entity must have those elements  -->    
+        <column name="ID" type="BIGINT">
+            <constraints primaryKey="true" nullable="false"/>
+        </column>
+        <column name="CREATED_BY" type="VARCHAR(100)">
+            <constraints nullable="false"/>
+        </column>
+        <column name="CREATED_DT" type="TIMESTAMP(6)"/>
+        <column name="CUSTOMCODE" type="VARCHAR(200)"/>
+        <!-- properties of users -->
+        <column name="NAME" type="VARCHAR2(20)">
+            <constraints nullable="false"/>
+        </column>
+        <column name="DESCRIPTION" type="VARCHAR(200)">
+             <constraints nullable="false"/>
+        </column>
+    </createTable>
+  </changeSet>
+</databaseChangeLog>

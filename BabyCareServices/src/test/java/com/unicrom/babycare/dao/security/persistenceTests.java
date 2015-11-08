@@ -73,16 +73,6 @@ public class persistenceTests {
 		return item;
 	}
 	
-	@Test
-	@Transactional
-	public void testSaveUserAndRole(){
-		User userCustom=this.getUserCustom();
-		Role roleCustom=this.getRoleCustom();
-		userCustom.getRoles().add(this.getRoleCustom());
-		this.entityManager.persist(userCustom);
-		this.entityManager.flush();
-		assertNotNull(userCustom.getId());
-	}
-	
+
 
 }

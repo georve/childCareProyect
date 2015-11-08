@@ -19,6 +19,9 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
+
+import org.hibernate.validator.constraints.Email;
+
 import com.unicrom.babycare.domain.parent.AbstractPersistentObject;
 import com.unicrom.babycare.domain.utilities.BooleanToIntegerConverter;
 
@@ -46,9 +49,14 @@ public class User extends AbstractPersistentObject {
 	@Column (name="ENABLED", nullable=false)
 	@Convert(converter=BooleanToIntegerConverter.class)
     private Boolean enabled;
+	
+	
+	@Column (name="EMAIL", length=100, nullable=false)
+	@Email(message = "Email Address is not a valid format")
+	private String email;
     
     
-    @OneToMany(cascade=CascadeType.ALL)
+    /*@OneToMany(cascade=CascadeType.ALL)
     @JoinColumn(name="ID")
     @JoinTable(name="USER_ROLES",
     joinColumns = {@JoinColumn(name="user_id", referencedColumnName="id")},
@@ -62,6 +70,14 @@ public class User extends AbstractPersistentObject {
 
 	public void setRoles(Collection<Role> roles) {
 		this.roles = roles;
+	}*/
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getName() {
