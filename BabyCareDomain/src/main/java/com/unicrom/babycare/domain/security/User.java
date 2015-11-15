@@ -56,21 +56,6 @@ public class User extends AbstractPersistentObject {
 	private String email;
     
     
-    /*@OneToMany(cascade=CascadeType.ALL)
-    @JoinColumn(name="ID")
-    @JoinTable(name="USER_ROLES",
-    joinColumns = {@JoinColumn(name="user_id", referencedColumnName="id")},
-    inverseJoinColumns = {@JoinColumn(name="role_id", referencedColumnName="id")}
-    )
-    private Collection<Role> roles = new LinkedHashSet<Role>();
-
-    public Collection<Role> getRoles() {
-		return roles;
-	}
-
-	public void setRoles(Collection<Role> roles) {
-		this.roles = roles;
-	}*/
 
 	public String getEmail() {
 		return email;

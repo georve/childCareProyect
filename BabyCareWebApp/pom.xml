@@ -9,6 +9,7 @@
   <modules>
   	<module>BabyCareDomain</module>
   	<module>BabyCareServices</module>
+	<module>BabyCareWeb</module>
   	<module>BabyCareDataBaseChangeLog</module>
   </modules>
 </project>
