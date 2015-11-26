@@ -6,6 +6,34 @@
   <packaging>pom</packaging>
   <name>BabyCareWebApp</name>
   <description>project that models a BabyCare business</description>
+        <properties>
+
+		<!-- Generic properties -->
+		<java.version>1.7</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		
+		<!-- Web -->
+		<jsp.version>2.2</jsp.version>
+		<jstl.version>1.2</jstl.version>
+		<servlet.version>2.5</servlet.version>
+		
+
+		<!-- Spring -->
+		<spring-framework.version>4.1.6.RELEASE</spring-framework.version>
+		 <spring.security.version>3.2.5.RELEASE</spring.security.version>
+
+		<!-- Hibernate / JPA -->
+		<hibernate.version>4.3.6.Final</hibernate.version>
+
+		<!-- Logging -->
+		<logback.version>1.0.13</logback.version>
+		<slf4j.version>1.7.5</slf4j.version>
+
+		<!-- Test -->
+		<junit.version>4.11</junit.version>
+
+	</properties>
   <modules>
   	<module>BabyCareDomain</module>
   	<module>BabyCareServices</module>
