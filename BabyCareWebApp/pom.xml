@@ -32,12 +32,16 @@
 
 		<!-- Test -->
 		<junit.version>4.11</junit.version>
+	    <org.aspectj-version>1.6.10</org.aspectj-version>
+		<org.slf4j-version>1.6.6</org.slf4j-version>
 
 	</properties>
   <modules>
   	<module>BabyCareDomain</module>
   	<module>BabyCareServices</module>
 	<module>BabyCareWeb</module>
+	<module>BabyCareWebMvc</module>
   	<module>BabyCareDataBaseChangeLog</module>
+  	<!-- <module>BabyCareWebBoostrap</module>-->
   </modules>
 </project>
