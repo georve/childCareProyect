@@ -39,9 +39,7 @@
   <modules>
   	<module>BabyCareDomain</module>
   	<module>BabyCareServices</module>
-	<module>BabyCareWeb</module>
-	<module>BabyCareWebMvc</module>
   	<module>BabyCareDataBaseChangeLog</module>
-  	<!-- <module>BabyCareWebBoostrap</module>-->
+	<module>BabyCareWebMvc</module>
   </modules>
 </project>

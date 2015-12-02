@@ -150,6 +150,21 @@
 			<version>4.7</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.unicrom.babycare</groupId>
+			<artifactId>BabyCareDomain</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.unicrom.babycare</groupId>
+			<artifactId>BabyCareServices</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.unicrom.babycare</groupId>
+			<artifactId>BabyCareDataBaseChangeLog</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
