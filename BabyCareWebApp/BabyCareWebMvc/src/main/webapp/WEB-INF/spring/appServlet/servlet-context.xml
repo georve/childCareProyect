@@ -13,7 +13,7 @@
 
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
 	 <!-- Enable Annotating controller methods using @Secured -->
-    <sec:global-method-security secured-annotations="enabled" />
+    <!-- <sec:global-method-security secured-annotations="enabled" />-->
 	
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
