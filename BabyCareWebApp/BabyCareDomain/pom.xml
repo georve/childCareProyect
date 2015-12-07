@@ -97,18 +97,29 @@
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>${hibernate.version}</version>
 		</dependency>
-		
+		 
+		<dependency>
+          <groupId>org.hibernate</groupId>
+          <artifactId>hibernate-validator</artifactId>
+          <version>${hibernate-validation.version}</version>
+        <!-- <exclusions>
+          <exclusion>
+              <groupId>javax.validation</groupId>
+              <artifactId>validation-api</artifactId>
+          </exclusion>
+      </exclusions>-->
+       </dependency>
 		 <!-- Hibernate 4.3.6 core library library -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>${hibernate.version}</version>
         </dependency>
-        
+        <!--removed by issue with validation  -->
          <dependency>
    			<groupId>javax.validation</groupId>
    			<artifactId>validation-api</artifactId>
-   			<version>1.0.0.GA</version>
+   			<version>${javax.validation.version}</version>
   		</dependency>
 		
 		 <!-- Primefaces Version 5 -->
