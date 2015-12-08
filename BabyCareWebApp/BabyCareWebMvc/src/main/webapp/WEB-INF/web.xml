@@ -5,7 +5,7 @@
 	
     <display-name>BabyCareWebApplication</display-name>
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
     
 
@@ -20,6 +20,15 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+	
+	 <listener>
+        <listener-class>org.springframework.security.web.session.HttpSessionEventPublisher</listener-class>
+    </listener>
+     
+    <session-config>
+        <session-timeout>15</session-timeout>
+    </session-config>
+ 
 
 	<!-- Processes application requests -->
 	<servlet>
@@ -39,16 +48,22 @@
 	
 	
 	<!-- Spring Security -->
-	<!-- <filter>
+	<filter>
 		<filter-name>springSecurityFilterChain</filter-name>
 		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
 	</filter>
+	
+	<!-- Spring Security Configuration File -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/spring/appServlet/spring-security.xml</param-value>
+    </context-param>
 
 	<filter-mapping>
 		<filter-name>springSecurityFilterChain</filter-name>
 		<url-pattern>/*</url-pattern>
 		<dispatcher>FORWARD</dispatcher>
 		<dispatcher>REQUEST</dispatcher>
-	</filter-mapping>-->
+	</filter-mapping>
 
 </web-app>
