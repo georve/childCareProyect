@@ -16,10 +16,10 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
-		<link rel="stylesheet" href="assets/css/form-elements.css">
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link href="<c:url value='/resources/assets/bootstrap/css/bootstrap.min.css' />"  rel="stylesheet"></link>
+        <link href="<c:url value='/resources/assets/font-awesome/css/font-awesome.min.css' />"  rel="stylesheet"></link>
+        <link href="<c:url value='/resources/assets/css/form-elements.css' />"  rel="stylesheet"></link>
+        <link href="<c:url value='/resources/assets/css/style.css' />"  rel="stylesheet"></link>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,11 +29,11 @@
         <![endif]-->
 
         <!-- Favicon and touch icons -->
-        <link rel="shortcut icon" href="assets/ico/favicon.png">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+        <link href="<c:url value='/resources/assets/ico/favicon.png' />"  rel="shortcut icon"></link>
+        <link href="<c:url value='/resources/assets/ico/apple-touch-icon-144-precomposed.png' />" sizes="144x144" rel="apple-touch-icon-precomposed"></link>
+        <link href="<c:url value='/resources/assets/ico/apple-touch-icon-114-precomposed.png' />" sizes="114x114" rel="apple-touch-icon-precomposed"></link>
+        <link href="<c:url value='/resources/assets/ico/apple-touch-icon-72-precomposed.png' />" sizes="72x72" rel="apple-touch-icon-precomposed"></link>
+        <link href="<c:url value='/resources/assets/ico/apple-touch-icon-57-precomposed.png' />" rel="apple-touch-icon-precomposed"></link>
 
     </head>
 
@@ -110,10 +110,10 @@
 
 
         <!-- Javascript -->
-        <script src="assets/js/jquery-1.11.1.min.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="assets/js/jquery.backstretch.min.js"></script>
-        <script src="assets/js/scripts.js"></script>
+        <script src="<c:url value="/resources/assets/js/jquery-1.11.1.min.js"/>"></script>
+        <script src="<c:url value="/resources/assets/bootstrap/js/bootstrap.min.js"/>"></script>
+        <script src="<c:url value="/resources/assets/js/jquery.backstretch.min.js"/>"></script>
+        <script src="<c:url value="/resources/assets/js/scripts.js"/>"></script>
         
         <!--[if lt IE 10]>
             <script src="assets/js/placeholder.js"></script>

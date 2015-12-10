@@ -20,7 +20,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class LoginController {
 
-	@RequestMapping("login")
+	@RequestMapping("/login")
 	public ModelAndView getLoginForm(
 			@RequestParam(required = false) String authfailed, String logout,
 			String denied) {
@@ -32,17 +32,17 @@ public class LoginController {
 		} else if (denied != null) {
 			message = "Access denied for this user !";
 		}
-		return new ModelAndView("login", "message", message);
+		return new ModelAndView("index", "message", message);
 	}
 
 	@RequestMapping(value = "/login/{error}", method = RequestMethod.GET)
 	public final String displayLoginform(Model model,
 			@PathVariable final String error) {
 		model.addAttribute("message", error);
-		return "login";
+		return "index";
 	}
 
-	@RequestMapping("403page")
+	@RequestMapping("/403page")
 	public String ge403denied(Model model) {
 		Authentication auth = SecurityContextHolder.getContext()
 				.getAuthentication();
