@@ -40,7 +40,7 @@ public class persistenceTests {
 	public void testUserDaompl() throws Exception {
 		User item = getUserCustom();
 		userdao.insert(item);
-		assertEquals(1, userdao.count());
+		assertEquals(3, userdao.count());
 	}
 
 
@@ -60,7 +60,7 @@ public class persistenceTests {
 	public void testRoleDaompl() throws Exception {
 		Role item = getRoleCustom();
 		roledao.insert(item);
-		assertEquals(1, roledao.count());
+		assertEquals(3, roledao.count());
 	}
 
 
@@ -69,6 +69,7 @@ public class persistenceTests {
 		item.setCreatedBy("georman.calderon");
 		item.setCustomCode("0101");
 		item.setName("XXXX");
+		item.setUserName("georman");
 		item.setDescription("description");
 		return item;
 	}

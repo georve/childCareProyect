@@ -32,6 +32,17 @@ public class Role extends AbstractPersistentObject {
 	
 	@Column (name="DESCRIPTION", length=200, nullable=false)
 	private String description;
+	
+	@Column (name="USERNAME", length=20, nullable=false)
+	private String userName;
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 
 	/**
 	 * @return the name

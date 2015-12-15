@@ -43,7 +43,7 @@ public class User extends AbstractPersistentObject {
 	@Column (name="PASSWORD", length=100, nullable=false)
 	private String password;
     
-	@Column (name="ENABLED", nullable=false)
+	@Column (name="ENABLE", nullable=false)
 	@Convert(converter=BooleanToIntegerConverter.class)
     private Boolean enabled;
     
