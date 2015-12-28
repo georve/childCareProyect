@@ -13,12 +13,16 @@
 	
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<mvc:annotation-driven />
+	<!-- this annotation link services with web application -->
+	<import resource="classpath*:/META-INF/spring/app-context.xml" />
+	
 	
 	<mvc:view-controller path="/" view-name="index" />
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<mvc:resources mapping="/resources/**" location="/resources/" />
-	
+    <mvc:resources mapping="/img/**" location="classpath:/resources/assets/img/"/>
+
 	  <!-- Message Bundles -->
    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
     <property name="basenames">

@@ -21,6 +21,7 @@
         <link href="<c:url value='/resources/assets/css/form-elements.css' />"  rel="stylesheet"></link>
         <link href="<c:url value='/resources/assets/css/style.css' />"  rel="stylesheet"></link>
 
+
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -34,6 +35,8 @@
         <link href="<c:url value='/resources/assets/ico/apple-touch-icon-114-precomposed.png' />" sizes="114x114" rel="apple-touch-icon-precomposed"></link>
         <link href="<c:url value='/resources/assets/ico/apple-touch-icon-72-precomposed.png' />" sizes="72x72" rel="apple-touch-icon-precomposed"></link>
         <link href="<c:url value='/resources/assets/ico/apple-touch-icon-57-precomposed.png' />" rel="apple-touch-icon-precomposed"></link>
+        
+
 
     </head>
 
@@ -114,6 +117,7 @@
         <script src="<c:url value="/resources/assets/bootstrap/js/bootstrap.min.js"/>"></script>
         <script src="<c:url value="/resources/assets/js/jquery.backstretch.min.js"/>"></script>
         <script src="<c:url value="/resources/assets/js/scripts.js"/>"></script>
+
         
         <!--[if lt IE 10]>
             <script src="assets/js/placeholder.js"></script>
