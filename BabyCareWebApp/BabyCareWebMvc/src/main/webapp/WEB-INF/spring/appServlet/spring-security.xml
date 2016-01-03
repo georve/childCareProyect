@@ -6,10 +6,11 @@
  http://www.springframework.org/schema/security
  http://www.springframework.org/schema/security/spring-security-3.2.xsd">
 	<http auto-config="true" use-expressions="true">
+	    <intercept-url pattern="/resources/**" access="permitAll" />
 		<access-denied-handler error-page="/403page" />
-		<intercept-url pattern="/home/**" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />
+		<intercept-url pattern="/main/**" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />
 		<form-login login-page='/login' username-parameter="username"
-			password-parameter="password" default-target-url="/"
+			password-parameter="password" default-target-url="/main"
 			authentication-failure-url="/login?authfailed" />
 
         <logout invalidate-session="true" logout-success-url="/login"
