@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns='http://www.liquibase.org/xml/ns/dbchangelog'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xsi:schemaLocation='http://www.liquibase.org/xml/ns/dbchangelog 
+  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd'>
+
+
+  <changeSet id="001" author="yelitza.chacon">
+     <createTable
+            remarks="A String"
+            schemaName="UCPB"
+            tableName="BC_PARENT">
+        <!--all entity must have those elements  -->    
+        <column name="ID" type="BIGINT">
+            <constraints primaryKey="true" nullable="false"/>
+        </column>
+        <column name="CREATED_BY" type="VARCHAR(100)">
+            <constraints nullable="false"/>
+        </column>
+        <column name="CREATED_DT" type="TIMESTAMP(6)"/>
+        <column name="CUSTOMCODE" type="VARCHAR(200)"/>
+        <!-- properties of users -->
+        <column name="PRT_NAME" type="VARCHAR2(100)">
+            <constraints nullable="false"/>
+        </column>
+        <column name="PRT_RELASHIONSHIP" type="boolean" defaultValueBoolean="true"/>
+  
+        <column name="PRT_PLACE_EMPLOY" type="VARCHAR(100)"/>
+           
+    </createTable>
+   </changeSet>
+   
+   
+</databaseChangeLog>
