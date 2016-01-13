@@ -3,6 +3,8 @@
  */
 package com.unicrom.babycare.dao.security;
 
+import org.springframework.stereotype.Repository;
+
 import com.unicrom.babycare.dao.entityparent.EntityDao;
 import com.unicrom.babycare.domain.security.User;
 
@@ -10,6 +12,7 @@ import com.unicrom.babycare.domain.security.User;
  * @author Georman
  *
  */
+@Repository
 public interface UserDao extends EntityDao<User> {
 	
 	
