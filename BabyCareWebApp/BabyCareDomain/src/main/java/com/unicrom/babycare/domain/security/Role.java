@@ -8,7 +8,11 @@ import javax.persistence.Entity;
 
 
 
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 import com.unicrom.babycare.domain.parent.AbstractPersistentObject;
 
@@ -19,7 +23,8 @@ import com.unicrom.babycare.domain.parent.AbstractPersistentObject;
  *
  */
 @Entity
-@Table(name="UCPB_ROLE")
+@Table(name="UCPB_ROLE",uniqueConstraints = @UniqueConstraint(
+		columnNames = { "role", "username" }))
 public class Role extends AbstractPersistentObject {
 
 	/**
@@ -27,52 +32,40 @@ public class Role extends AbstractPersistentObject {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	@Column (name="NAME", length=100, nullable=false)
-	private String name;
 	
-	@Column (name="DESCRIPTION", length=200, nullable=false)
-	private String description;
+	@Column (name="ROLE", length=100, nullable=false)
+	private String role;
 	
-	@Column (name="USERNAME", length=20, nullable=false)
-	private String userName;
+	
+	//@Column (name="USERNAME", length=20, nullable=false)
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "username", nullable = false)
+	private User user;
 
-	public String getUserName() {
-		return userName;
+	public User getUser() {
+		return user;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUser(User userName) {
+		this.user = userName;
 	}
 
 	/**
 	 * @return the name
 	 */
-	public String getName() {
-		return name;
+	public String getRole() {
+		return role;
 	}
 
 	/**
 	 * @param name the name to set
 	 */
-	public void setName(String name) {
-		this.name = name;
+	public void setRole(String role) {
+		this.role = role;
 	}
 
-	/**
-	 * @return the description
-	 */
-	public String getDescription() {
-		return description;
-	}
 
-	/**
-	 * @param description the description to set
-	 */
-	public void setDescription(String description) {
-		this.description = description;
-	}
 	
 	
 
 }
-
