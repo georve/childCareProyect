@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns='http://www.liquibase.org/xml/ns/dbchangelog'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xsi:schemaLocation='http://www.liquibase.org/xml/ns/dbchangelog 
+  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd'>
+
+
+  <changeSet id="001" author="georman.calderon">
+     <dropColumn tableName="UCPB_ROLE" 
+                 schemaName="UCPB"
+                 columnName="DESCRIPTION" />
+
+  </changeSet>
+  <changeSet id="002" author="georman.calderon">
+       <dropColumn tableName="UCPB_ROLE" 
+                 schemaName="UCPB"
+                 columnName="NAME" />
+  </changeSet>
+  <changeSet id="003" author="georman.calderon">
+        <addColumn tableName="UCPB_ROLE" 
+            schemaName="UCPB">
+         <column name="ROLE"  type="VARCHAR2(100)"/>         
+     </addColumn>
+  </changeSet>
+  <changeSet id="004" author="georman.calderon">    
+        <modifyDataType
+            columnName="PASSWORD"
+            newDataType="VARCHAR2(100)"
+            schemaName="UCPB"
+            tableName="UCPB_USER"/>
+  
+  </changeSet>
+</databaseChangeLog>
